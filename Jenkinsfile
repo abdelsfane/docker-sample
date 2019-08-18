@@ -4,7 +4,7 @@ node {
   stage("Update") {
       sh '''
       echo "Hello!"
-        docker run hello-world
+        sudo docker run hello-world
         '''
   }
 }
