@@ -3,7 +3,6 @@ node {
   
   stage("Create Dockerfile") {
       sh '''
-      +x
       mkdir myapp && cd myapp && touch Dockerfile
       cat > Dockerfile <<'endmsg'
     FROM ubuntu:18.04
@@ -27,7 +26,6 @@ node {
   }
 stage("Create HTML file") {
     sh '''
-    +x
     touch index.html
     cat > index.html <<'endmsg'
     <!DOCTYPE html>
@@ -50,7 +48,7 @@ stage("Create HTML file") {
   }
   stage("Docker Run Container") {
       sh '''
-      docker run --name my_ubuntu_instance -i -t ubuntuc
+      docker run --name my_ubuntu_instance -i -t ubuntu
       ls
       whoami
       
