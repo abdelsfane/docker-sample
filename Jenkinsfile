@@ -7,3 +7,4 @@ node {
         docker run hello-world
         '''
   }
+}
